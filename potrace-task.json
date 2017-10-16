@@ -1,0 +1,39 @@
+{
+    "name": "Potrace_beta",
+    "version": "0.0.1",
+    "description": "Trace raster image using potrace and return geolocated or lat-lon coordinates.",
+    "properties": {
+        "isPublic": true,
+        "timeout": 7200
+    },
+    "inputPortDescriptors": [
+        {
+            "name": "image",
+            "type": "directory",
+            "description": "The data.",
+            "required": true
+        },
+        {
+            "name": "threshold",
+            "type": "string",
+            "description": "Threshold the input image.",
+            "required": true
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "result",
+            "type": "directory",
+            "description": "Potrace result."
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "properties": {
+                "image": "venicegeo/potrace-task"
+            },
+            "command": "python /potrace-task.py"
+        }
+    ]
+}
