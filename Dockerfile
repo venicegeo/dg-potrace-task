@@ -21,16 +21,18 @@ RUN \
         python \
         py-pip \
         git \
+        py-gdal \
+        py-six \
+        py-click \
+        py-enum34 \
         /opt/packages/agg-dev-2.5-r0.apk \
         /opt/packages/agg-2.5-r0.apk \
     ; \
     pip install \
         glob2 \
-        six \
         pyproj \
         fiona \
         gippy \
-        gdal==2.1.3 \
         pypotrace \
     ; \
     git clone https://github.com/venicegeo/beachfront-py; \

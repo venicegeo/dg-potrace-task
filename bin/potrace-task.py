@@ -45,7 +45,7 @@ class PotraceTask(GbdxTaskInterface):
         for img_file in all_lower:
             geoimg = gippy.GeoImage(img_file, True)
             coastline = bfvec.potrace(
-                geoimg[0] > threshold, minsize=defaults['minsize'], close=defaults['close'], alphamax=defaults['smooth'])
+                geoimg[0] > float(threshold), minsize=defaults['minsize'], close=defaults['close'], alphamax=defaults['smooth'])
 
             # convert coordinates to GeoJSON
             geojson = bfvec.to_geojson(coastline, source=geoimg.basename())

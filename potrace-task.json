@@ -1,9 +1,9 @@
 {
     "name": "Potrace_beta",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Trace raster image using potrace and return geolocated or lat-lon coordinates.",
     "properties": {
-        "isPublic": true,
+        "isPublic": false,
         "timeout": 7200
     },
     "inputPortDescriptors": [
