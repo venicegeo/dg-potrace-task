@@ -1,6 +1,6 @@
 {
     "name": "Potrace_beta",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Trace raster image using potrace and return geolocated or lat-lon coordinates.",
     "properties": {
         "isPublic": false,
@@ -31,7 +31,7 @@
         {
             "type": "DOCKER",
             "properties": {
-                "image": "venicegeo/potrace-task"
+                "image": "venicegeo/dg-potrace-task"
             },
             "command": "python /potrace-task.py"
         }
